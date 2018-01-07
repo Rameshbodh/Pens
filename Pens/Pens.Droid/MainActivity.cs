@@ -1,33 +1,20 @@
-﻿using System;
-
+﻿
 using Android.App;
-using Android.Content;
-using Android.Runtime;
-using Android.Views;
 using Android.Widget;
 using Android.OS;
-
+using Android.Support.V7.App;
+using s = Pens.Droid.CommonClass.SharedMethods;
 namespace Pens.Droid
 {
-	[Activity (Label = "Pens.Droid", MainLauncher = true, Icon = "@drawable/icon")]
-	public class MainActivity : Activity
+    [Activity (Label = "Pens.Droid", Icon = "@drawable/icon",ConfigurationChanges =Android.Content.PM.ConfigChanges.Orientation)]
+	public class MainActivity : AppCompatActivity
 	{
-		int count = 1;
-
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
-
-			// Set our view from the "main" layout resource
 			SetContentView (Resource.Layout.Main);
-
-			// Get our button from the layout resource,
-			// and attach an event to it
-			Button button = FindViewById<Button> (Resource.Id.myButton);
-			
-			button.Click += delegate {
-				button.Text = string.Format ("{0} clicks!", count++);
-			};
+            s.activity = this;
+		
 		}
 	}
 }

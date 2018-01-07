@@ -1556,6 +1556,9 @@ namespace Pens.Droid
 			// aapt resource value: 0x7f05004a
 			public const int highlight_alpha_material_light = 2131034186;
 			
+			// aapt resource value: 0x7f05006c
+			public const int horizontal_margim = 2131034220;
+			
 			// aapt resource value: 0x7f050000
 			public const int item_touch_helper_max_drag_scroll_per_frame = 2131034112;
 			
@@ -1573,6 +1576,9 @@ namespace Pens.Droid
 			
 			// aapt resource value: 0x7f05004d
 			public const int notification_subtext_size = 2131034189;
+			
+			// aapt resource value: 0x7f05006b
+			public const int vertical_margin = 2131034219;
 			
 			static Dimension()
 			{
